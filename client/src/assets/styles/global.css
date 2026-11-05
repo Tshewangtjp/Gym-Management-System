@@ -1,5 +1,4 @@
 
-@import "./variables.css";
 
 * {
   margin: 0;
@@ -237,4 +236,61 @@ textarea:focus-visible {
     scroll-behavior: auto !important;
     transition-duration: .01ms !important;
   }
+}
+
+:root {
+  --primary-color: #e63946;
+  --primary-dark: #c92735;
+  --secondary-color: #172337;
+  --background-color: #f5f7fb;
+  --surface-color: #ffffff;
+  --text-color: #202b3c;
+  --muted-color: #687386;
+  --border-color: #e5eaf1;
+
+  --shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+  --border-radius: 12px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  min-width: 320px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+#root {
+  min-height: 100vh;
 }

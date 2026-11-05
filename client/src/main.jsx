@@ -4,8 +4,12 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 
 import App from "./App";
-import "./assets/styles/reusable-components.css";
+
 import "./assets/styles/global.css";
+import "./assets/styles/layout.css";
+import "./assets/styles/components.css";
+import "./assets/styles/responsive.css";
+import "./assets/styles/reusable-components.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>

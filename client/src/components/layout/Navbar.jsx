@@ -5,25 +5,43 @@ import { NavLink } from "react-router-dom";
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const closeMenu = () => setMenuOpen(false);
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
 
   return (
     <nav className="navbar">
-      <NavLink to="/" className="navbar-brand" onClick={closeMenu}>
+      {/* Logo */}
+      <NavLink
+        to="/"
+        className="navbar-brand"
+        onClick={closeMenu}
+      >
         <span className="brand-icon">G</span>
-        <span>GYM<span className="brand-highlight">HUB</span></span>
+        <span>
+          GYM<span className="brand-highlight">HUB</span>
+        </span>
       </NavLink>
 
+      {/* Hamburger Button */}
       <button
-        className="menu-toggle"
+        className={`hamburger ${menuOpen ? "active" : ""}`}
         onClick={() => setMenuOpen(!menuOpen)}
-        aria-label="Toggle navigation menu"
+        aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
         aria-expanded={menuOpen}
+        aria-controls="navbar-menu"
+        type="button"
       >
-        {menuOpen ? "✕" : "☰"}
+        <span></span>
+        <span></span>
+        <span></span>
       </button>
 
-      <div className={`nav-links ${menuOpen ? "show-menu" : ""}`}>
+      {/* Navigation Links */}
+      <div
+        id="navbar-menu"
+        className={`nav-links ${menuOpen ? "show-menu" : ""}`}
+      >
         <NavLink to="/" end onClick={closeMenu}>
           Home
         </NavLink>
