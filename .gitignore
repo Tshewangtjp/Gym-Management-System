@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 # Dependencies
 node_modules/
@@ -21,3 +22,28 @@ desktop.ini
 
 # VS Code local settings
 .vscode/
+=======
+
+# Dependencies
+node_modules/
+
+# Environment variables
+.env
+.env.local
+
+# Build files
+dist/
+build/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Operating system
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# VS Code local settings
+.vscode/
+>>>>>>> feee915e55912b122ad7b18a6055d0b4194fe7b5
