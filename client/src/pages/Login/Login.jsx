@@ -1,11 +1,47 @@
 
+import PageTitle from "../../components/ui/PageTitle";
+import Card from "../../components/ui/Card";
+import Button from "../../components/ui/Button";
+
 function Login() {
+  const handleLogin = (event) => {
+    event.preventDefault();
+    alert("Login interface is working!");
+  };
+
   return (
-    <section>
-      <h1>Login Page</h1>
-      <h2>Welcome Back</h2>
-      <p>Login functionality will be implemented in a future sprint.</p>
-    </section>
+    <div className="login-page">
+      <PageTitle
+        title="Login"
+        description="Access your Gym Management System account."
+      />
+
+      <Card
+        title="Welcome Back"
+        description="Enter your account details to continue."
+      >
+        <form className="login-form" onSubmit={handleLogin}>
+          <label>Email Address</label>
+          <input
+            type="email"
+            placeholder="Enter your email"
+            required
+          />
+
+          <label>Password</label>
+          <input
+            type="password"
+            placeholder="Enter your password"
+            required
+          />
+
+          <Button
+            text="Login"
+            type="submit"
+          />
+        </form>
+      </Card>
+    </div>
   );
 }
 

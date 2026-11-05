@@ -14,13 +14,11 @@ function AppRoutes() {
     <Routes>
       <Route element={<MainLayout />}>
         <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/notfound" element={<NotFound />} />
       </Route>
-
-      <Route path="/login" element={<Login />} />
-
-      <Route path="*" element={<NotFound />} />
     </Routes>
   );
 }
