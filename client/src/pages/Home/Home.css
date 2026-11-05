@@ -1,0 +1,150 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.home-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background:
+    radial-gradient(circle at 15% 20%, #c4b5fd 0%, transparent 35%),
+    radial-gradient(circle at 85% 80%, #93c5fd 0%, transparent 35%),
+    linear-gradient(135deg, #eef2ff, #e0e7ff, #f8fafc);
+  font-family: Inter, sans-serif;
+}
+
+.glass-card {
+  width: 100%;
+  max-width: 750px;
+  padding: 65px 55px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.38);
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
+  box-shadow: 0 20px 60px rgba(31, 38, 135, 0.10);
+}
+
+.home-icon {
+  width: 58px;
+  height: 58px;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 28px;
+  border-radius: 18px;
+  background: rgba(99, 102, 241, 0.12);
+  color: #6366f1;
+  font-size: 28px;
+}
+
+.welcome-label {
+  color: #6366f1;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.glass-card h1 {
+  margin-top: 22px;
+  color: #1e293b;
+  font-size: clamp(32px, 5vw, 52px);
+  font-weight: 800;
+  letter-spacing: -2px;
+}
+
+.glass-card h1 span {
+  color: #6366f1;
+}
+
+.glass-card h2 {
+  margin-top: 14px;
+  color: #475569;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.glass-card p {
+  max-width: 480px;
+  margin: 20px auto 32px;
+  color: #64748b;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.home-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.home-actions button {
+  padding: 14px 24px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.primary-btn {
+  border: none;
+  background: #6366f1;
+  color: white;
+  box-shadow: 0 8px 20px rgba(99, 102, 241, 0.25);
+}
+
+.primary-btn:hover {
+  background: #4f46e5;
+  transform: translateY(-3px);
+}
+
+.primary-btn span {
+  margin-left: 10px;
+}
+
+.secondary-btn {
+  border: 1px solid rgba(255,255,255,0.8);
+  background: rgba(255,255,255,0.4);
+  color: #475569;
+}
+
+.secondary-btn:hover {
+  background: rgba(255,255,255,0.8);
+}
+
+.home-footer {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 55px;
+  color: #94a3b8;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+@media (max-width: 600px) {
+  .glass-card {
+    padding: 45px 22px;
+  }
+
+  .home-actions {
+    flex-direction: column;
+  }
+
+  .home-actions button {
+    width: 100%;
+  }
+
+  .home-footer {
+    font-size: 8px;
+    gap: 7px;
+  }
+}

@@ -1,9 +1,17 @@
 
 :root {
-  --primary-color: #e63946;
-  --secondary-color: #1d3557;
-  --background-color: #f4f6f9;
-  --text-color: #222222;
+  --primary-color: #6366f1;
+  --secondary-color: #1e293b;
+
+  --background-color: #f1f5f9;
+  --text-color: #1e293b;
   --white: #ffffff;
-  --border-radius: 10px;
+
+  --border-radius: 14px;
+
+  --glass-bg: rgba(255, 255, 255, 0.55);
+  --glass-border: rgba(255, 255, 255, 0.75);
+  --glass-blur: 20px;
+
+  --shadow: 0 8px 32px rgba(31, 38, 135, 0.08);
 }
