@@ -12,9 +12,9 @@ function Login() {
   return (
     <div className="login-page">
       <PageTitle
-        title="Login"
-        description="Access your Gym Management System account."
-      />
+  title="Login"
+  subtitle="Access your GymHub account."
+/>
 
       <Card
         title="Welcome Back"

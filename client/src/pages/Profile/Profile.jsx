@@ -7,9 +7,9 @@ function Profile() {
   return (
     <div className="profile-page">
       <PageTitle
-        title="My Profile"
-        description="View your account information."
-      />
+  title="My Profile"
+  subtitle="View and manage your personal information."
+/>
 
       <Card title="Personal Information">
         <div className="profile-details">

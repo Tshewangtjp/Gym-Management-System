@@ -1,42 +1,87 @@
 
+import { useState } from "react";
 import PageTitle from "../../components/ui/PageTitle";
 import Card from "../../components/ui/Card";
+import Button from "../../components/ui/Button";
+
 
 function Dashboard() {
+  // Exercise 3: State
+  const [count, setCount] = useState(0);
+
+  // Exercise 5: User input
+  const [userName, setUserName] = useState("");
+
+  // Exercise 6: Conditional rendering
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
   return (
     <div className="dashboard-page">
       <PageTitle
         title="Dashboard"
-        description="Overview of your gym management activities."
+        subtitle="Welcome to your Gym Management Dashboard."
       />
 
       <div className="dashboard-grid">
-        <Card title="Total Members" description="Registered gym members">
-          <h2 className="dashboard-number">250</h2>
+
+        {/* Counter */}
+        <Card
+          title="Interactive Counter"
+          description="Test React State and button events."
+        >
+          <h2>{count}</h2>
+          <p>Total button clicks: {count}</p>
+
+          <Button onClick={() => setCount(count + 1)}>
+            Increase Count
+          </Button>
+
+          <Button
+            variant="outline"
+            onClick={() => setCount(0)}
+          >
+            Reset Count
+          </Button>
         </Card>
 
-        <Card title="Total Trainers" description="Available gym trainers">
-          <h2 className="dashboard-number">15</h2>
+        {/* User Input */}
+        <Card
+          title="Dynamic User Input"
+          description="Enter your name below."
+        >
+          <input
+            type="text"
+            placeholder="Enter your name"
+            value={userName}
+            onChange={(event) =>
+              setUserName(event.target.value)
+            }
+          />
+
+          <p>
+            Hello, {userName.trim() || "Guest"}!
+          </p>
         </Card>
 
-        <Card title="Active Memberships" description="Currently active plans">
-          <h2 className="dashboard-number">180</h2>
+        {/* Conditional Rendering */}
+        <Card
+          title="Account Status"
+          description="Test conditional rendering."
+        >
+          {isLoggedIn ? (
+            <p>Welcome! You are logged in.</p>
+          ) : (
+            <p>Please log in to access your dashboard.</p>
+          )}
+
+          <Button
+            onClick={() => setIsLoggedIn(!isLoggedIn)}
+          >
+            {isLoggedIn ? "Logout" : "Login"}
+          </Button>
         </Card>
 
-        <Card title="Monthly Revenue" description="Illustrative revenue figure">
-          <h2 className="dashboard-number">₹45,000</h2>
-        </Card>
       </div>
-
-      <Card
-        title="Welcome to GymHub"
-        description="Your gym management dashboard is ready."
-      >
-        <p>
-          Use the navigation menu to explore the different
-          sections of the application.
-        </p>
-      </Card>
     </div>
   );
 }

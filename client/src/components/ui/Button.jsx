@@ -1,6 +1,6 @@
 
 function Button({
-  text,
+  children,
   onClick,
   type = "button",
   variant = "primary",
@@ -13,7 +13,7 @@ function Button({
       onClick={onClick}
       disabled={disabled}
     >
-      {text}
+      {children}
     </button>
   );
 }

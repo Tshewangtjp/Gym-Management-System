@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import PageTitle from "../../components/ui/PageTitle";
 import Button from "../../components/ui/Button";
 import Card from "../../components/ui/Card";
+import WelcomeMessage from "../../components/ui/WelcomeMessage";
 
 function Home() {
   const navigate = useNavigate();
@@ -27,6 +28,7 @@ function Home() {
             <Button
               text="Get Started"
               onClick={() => navigate("/login")}
+              Login
             />
 
             <Button
@@ -40,9 +42,13 @@ function Home() {
 
       <section className="features-section">
         <PageTitle
-          title="Our Features"
-          description="Everything you need to manage your gym efficiently."
-        />
+  title="Welcome to GymHub"
+  subtitle="Your fitness management platform."
+/>
+        <WelcomeMessage
+        userName="Pema"
+        projectName="Gym Management System"
+      />
 
         <div className="feature-grid">
           <Card title="Member Management"
